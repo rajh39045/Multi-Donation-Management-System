@@ -1,0 +1,19 @@
+# Ignore specific file
+secret.txt
+
+# Ignore folder
+node_modules/
+
+# Ignore all log files
+*.log
+
+# Ignore environment file
+.env
+
+# Ignore compiled files
+*.class
+*.exe
+
+# Ignore IDE files
+.vscode/
+.idea/
