@@ -1,4 +1,6 @@
-const BASE_URL = "http://localhost:5000/api";
+// Use environment variable for backend URL
+// Fallback to localhost for development
+const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
 
 // 🔑 Auto token
 const getToken = () => localStorage.getItem("token");
