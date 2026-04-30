@@ -12,8 +12,16 @@ dotenv.config();
 
 const app = express();
 
+// CORS configuration to accept frontend requests
+const corsOptions = {
+  origin: ['https://multi-donation-management-system.vercel.app', 'http://localhost:5173', 'http://localhost:3000'],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+};
+
 // Middleware
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Connect to MongoDB
